@@ -1,3 +1,17 @@
 /data_raw/
 .vscode/
 __pycache__/
+
+*.xls
+*.xlsx
+
+~$*
+*.tmp
+
+
+.DS_Store
+Thumbs.db
+
+*.pyc
+
+.ipynb_checkpoints/
