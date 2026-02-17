@@ -11,7 +11,6 @@ REQUIRED = ["fecha", "referencia", "codigo", "descripcion", "debitos", "creditos
 def _norm_text(x) -> str:
     s = "" if pd.isna(x) else str(x)
     s = s.strip().replace("\n", " ").replace("\r", " ")
-    # remove accents safely using pandas string normalize
     s = (
         pd.Series([s])
         .str.normalize("NFKD")
@@ -31,12 +30,12 @@ def _find_header_row(df_raw: pd.DataFrame) -> int:
     """
     df_str = df_raw.copy()
 
-    for i in range(min(len(df_str), 80)):  # usually header is near the top
+    for i in range(min(len(df_str), 80)):  
         row = [_norm_text(v) for v in df_str.iloc[i].tolist()]
         joined = " | ".join(row)
 
         has_fecha = "fecha" in joined
-        has_desc = "descrip" in joined  # catches descripcion/description variants
+        has_desc = "descrip" in joined  
         has_money_cols = ("debit" in joined or "debito" in joined or "debitos" in joined) and (
             "credit" in joined or "credito" in joined or "creditos" in joined
         )
@@ -58,10 +57,10 @@ def _parse_num(s: pd.Series) -> pd.Series:
     x = (
         s.astype(str)
         .str.strip()
-        .str.replace("\u00a0", "", regex=False)  # NBSP
-        .str.replace(" ", "", regex=False)       # thousands spaces
-        .str.replace(".", "", regex=False)       # sometimes thousands dot
-        .str.replace(",", ".", regex=False)      # decimal comma -> dot
+        .str.replace("\u00a0", "", regex=False)  
+        .str.replace(" ", "", regex=False)       
+        .str.replace(".", "", regex=False)       
+        .str.replace(",", ".", regex=False)      
     )
     return pd.to_numeric(x, errors="coerce").fillna(0)
 
@@ -82,7 +81,6 @@ def _standardize_columns(cols) -> list[str]:
 
 
 def read_bank_table(fp: Path) -> pd.DataFrame:
-    # Read sheet with NO header because the table starts lower (like row 13)
     df_raw = pd.read_excel(fp, header=None)
 
     header_row = _find_header_row(df_raw)

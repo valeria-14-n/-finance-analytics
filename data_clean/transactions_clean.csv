@@ -1,0 +1,212 @@
+transaction_id;date;description;amount;type;currency;account;reference;code;source_file
+20251102_110100000_-1400_gastos noviembre 2025.xls;2025-11-02;COFFEE GARDEN\        SAN JOSE;-1400;expense;CRC;main_crc;110100000;CP;gastos noviembre 2025.xls
+20251102_110100000_-25000_gastos noviembre 2025.xls;2025-11-02;SERVICENTRO CICSA\    SAN JOSE;-25000;expense;CRC;main_crc;110100000;CP;gastos noviembre 2025.xls
+20251102_406431854_2000_gastos noviembre 2025.xls;2025-11-02;TEF DE: 959932377;2000;transfer;CRC;main_crc;406431854;TF;gastos noviembre 2025.xls
+20251102_74836_-17815_gastos noviembre 2025.xls;2025-11-02;SEGURO BELD121489;-17815;expense;CRC;main_crc;74836;TF;gastos noviembre 2025.xls
+20251103_110200000_-1400_gastos noviembre 2025.xls;2025-11-03;AUTO MERCADO SANTO DOMHEREDIA;-1400;expense;CRC;main_crc;110200000;CP;gastos noviembre 2025.xls
+20251103_110200000_-3100_gastos noviembre 2025.xls;2025-11-03;CASTILLO COUNTRY CLUB\SAN RAFA;-3100;expense;CRC;main_crc;110200000;CP;gastos noviembre 2025.xls
+20251103_110200000_-6295_gastos noviembre 2025.xls;2025-11-03;AUTO MERCADO SANTO DOMHEREDIA;-6295;expense;CRC;main_crc;110200000;CP;gastos noviembre 2025.xls
+20251104_110300000_-700_gastos noviembre 2025.xls;2025-11-04;MUNDOVENDING NAYAX   \HEREDIA;-700;expense;CRC;main_crc;110300000;CP;gastos noviembre 2025.xls
+20251105_110400000_-700_gastos noviembre 2025.xls;2025-11-05;MUNDOVENDING NAYAX   \HEREDIA;-700;expense;CRC;main_crc;110400000;CP;gastos noviembre 2025.xls
+20251105_406417499_15000_gastos noviembre 2025.xls;2025-11-05;TEF DE: 959932377;15000;transfer;CRC;main_crc;406417499;TF;gastos noviembre 2025.xls
+20251106_406432690_3000_gastos noviembre 2025.xls;2025-11-06;TEF DE: 959932377;3000;transfer;CRC;main_crc;406432690;TF;gastos noviembre 2025.xls
+20251106_406444210_5500_gastos noviembre 2025.xls;2025-11-06;TEF DE: 959932377;5500;transfer;CRC;main_crc;406444210;TF;gastos noviembre 2025.xls
+20251107_406475749_20000_gastos noviembre 2025.xls;2025-11-07;TEF DE: 958938953;20000;income;CRC;main_crc;406475749;TF;gastos noviembre 2025.xls
+20251108_110700000_-2325_gastos noviembre 2025.xls;2025-11-08;PASTELERIA SANTO DOMINHEREDIA;-2325;expense;CRC;main_crc;110700000;CP;gastos noviembre 2025.xls
+20251108_110700000_-2500_gastos noviembre 2025.xls;2025-11-08;MUNDO COSMETICO PROFESSAN JOSE;-2500;expense;CRC;main_crc;110700000;CP;gastos noviembre 2025.xls
+20251108_110700000_-9010_gastos noviembre 2025.xls;2025-11-08;AUTO MERCADO SANTO DOMHEREDIA;-9010;expense;CRC;main_crc;110700000;CP;gastos noviembre 2025.xls
+20251109_110700248_-10000_gastos noviembre 2025.xls;2025-11-09;GASOLINERA LOS REYES;-10000;expense;CRC;main_crc;110700248;CP;gastos noviembre 2025.xls
+20251109_110800000_-3200_gastos noviembre 2025.xls;2025-11-09;SUPER MEGA MAS Y MAS\ HEREDIA;-3200;expense;CRC;main_crc;110800000;CP;gastos noviembre 2025.xls
+20251109_110800000_-9480_gastos noviembre 2025.xls;2025-11-09;DLC*ARCOS DORADOS\    SAN JOSE;-9480;expense;CRC;main_crc;110800000;CP;gastos noviembre 2025.xls
+20251109_406489630_2000_gastos noviembre 2025.xls;2025-11-09;TEF DE: 958938953;2000;income;CRC;main_crc;406489630;TF;gastos noviembre 2025.xls
+20251109_966548399_1700_gastos noviembre 2025.xls;2025-11-09;SINPE_Móvil_Empanada_Uber_eats;1700;income;CRC;main_crc;966548399;TF;gastos noviembre 2025.xls
+20251110_406442694_7500_gastos noviembre 2025.xls;2025-11-10;TEF DE: 958938953;7500;income;CRC;main_crc;406442694;TF;gastos noviembre 2025.xls
+20251110_406470980_10000_gastos noviembre 2025.xls;2025-11-10;TEF DE: 958938953;10000;income;CRC;main_crc;406470980;TF;gastos noviembre 2025.xls
+20251111_111000000_-3850_gastos noviembre 2025.xls;2025-11-11;ECOMMERCE STARBUCKS COESCAZU;-3850;expense;CRC;main_crc;111000000;CP;gastos noviembre 2025.xls
+20251111_406427195_1000_gastos noviembre 2025.xls;2025-11-11;TEF DE: 959932377;1000;transfer;CRC;main_crc;406427195;TF;gastos noviembre 2025.xls
+20251111_960496631_16000_gastos noviembre 2025.xls;2025-11-11;CD SINPE CAJA SEGURO SOCIAL;16000;income;CRC;main_crc;960496631;MC;gastos noviembre 2025.xls
+20251112_111100000_-4000_gastos noviembre 2025.xls;2025-11-12;MINISUPER VISTA LOS SUPUNTAREN;-4000;expense;CRC;main_crc;111100000;CP;gastos noviembre 2025.xls
+20251112_111100000_-700_gastos noviembre 2025.xls;2025-11-12;MUNDOVENDING NAYAX   \HEREDIA;-700;expense;CRC;main_crc;111100000;CP;gastos noviembre 2025.xls
+20251112_111100000_-820_gastos noviembre 2025.xls;2025-11-12;GLOBAL VIA RUTA 27\   SAN JOSE;-820;expense;CRC;main_crc;111100000;CP;gastos noviembre 2025.xls
+20251112_958486622_-1700_gastos noviembre 2025.xls;2025-11-12;SINPE MOVIL Sin_Descripcion;-1700;expense;CRC;main_crc;958486622;TS;gastos noviembre 2025.xls
+20251113_111200000_-10000_gastos noviembre 2025.xls;2025-11-13;ESTACION DE SERVICIO TSAN JOSE;-10000;expense;CRC;main_crc;111200000;CP;gastos noviembre 2025.xls
+20251113_111200000_-1150_gastos noviembre 2025.xls;2025-11-13;SUPER MEGA MAS Y MAS\ HEREDIA;-1150;expense;CRC;main_crc;111200000;CP;gastos noviembre 2025.xls
+20251113_111200000_-7590_gastos noviembre 2025.xls;2025-11-13;MXM STO DOMING OCN00PVHEREDIA;-7590;expense;CRC;main_crc;111200000;CP;gastos noviembre 2025.xls
+20251113_966427602_7000_gastos noviembre 2025.xls;2025-11-13;SINPE_Móvil_Mascarillas_de_Ann;7000;income;CRC;main_crc;966427602;TF;gastos noviembre 2025.xls
+20251113_966521902_3500_gastos noviembre 2025.xls;2025-11-13;SINPE_Móvil_Sin_Descripcion;3500;income;CRC;main_crc;966521902;TF;gastos noviembre 2025.xls
+20251114_111300000_-2000_gastos noviembre 2025.xls;2025-11-14;ISLA DEL COCO\        SAN JOSE;-2000;expense;CRC;main_crc;111300000;CP;gastos noviembre 2025.xls
+20251115_406466231_7000_gastos noviembre 2025.xls;2025-11-15;TEF DE: 959932377;7000;transfer;CRC;main_crc;406466231;TF;gastos noviembre 2025.xls
+20251115_966555821_-10000_gastos noviembre 2025.xls;2025-11-15;SINPE MOVIL Gasolina_______;-10000;expense;CRC;main_crc;966555821;TF;gastos noviembre 2025.xls
+20251116_111500000_-1500_gastos noviembre 2025.xls;2025-11-16;LEBLON COFFE SHOP\    SAN JOSE;-1500;expense;CRC;main_crc;111500000;CP;gastos noviembre 2025.xls
+20251116_111500000_-1700_gastos noviembre 2025.xls;2025-11-16;LEBLON COFFE SHOP\    SAN JOSE;-1700;expense;CRC;main_crc;111500000;CP;gastos noviembre 2025.xls
+20251116_111500000_-2400_gastos noviembre 2025.xls;2025-11-16;SUPER MEGA MAS Y MAS\ HEREDIA;-2400;expense;CRC;main_crc;111500000;CP;gastos noviembre 2025.xls
+20251116_111500000_-4100_gastos noviembre 2025.xls;2025-11-16;COCINA MAMA\          CARMEN;-4100;expense;CRC;main_crc;111500000;CP;gastos noviembre 2025.xls
+20251116_111500000_-700_gastos noviembre 2025.xls;2025-11-16;SUPER MEGA MAS Y MAS\ HEREDIA;-700;expense;CRC;main_crc;111500000;CP;gastos noviembre 2025.xls
+20251116_406438698_8000_gastos noviembre 2025.xls;2025-11-16;TEF DE: 959932377;8000;transfer;CRC;main_crc;406438698;TF;gastos noviembre 2025.xls
+20251116_958484363_-1500_gastos noviembre 2025.xls;2025-11-16;SINPE MOVIL Gorrito_navidad;-1500;expense;CRC;main_crc;958484363;TS;gastos noviembre 2025.xls
+20251117_406456210_14000_gastos noviembre 2025.xls;2025-11-17;TEF DE: 959932377;14000;transfer;CRC;main_crc;406456210;TF;gastos noviembre 2025.xls
+20251118_111700000_-3900_gastos noviembre 2025.xls;2025-11-18;PAN Y CAF. GRANIER CALAN JOSE;-3900;expense;CRC;main_crc;111700000;CP;gastos noviembre 2025.xls
+20251118_111700000_-7480_gastos noviembre 2025.xls;2025-11-18;DLC*ARCOS DORADOS\    SAN JOSE;-7480;expense;CRC;main_crc;111700000;CP;gastos noviembre 2025.xls
+20251119_111800000_-3135_gastos noviembre 2025.xls;2025-11-19;SUPER MEGA MAS Y MAS\ HEREDIA;-3135;expense;CRC;main_crc;111800000;CP;gastos noviembre 2025.xls
+20251120_111900000_-10850_gastos noviembre 2025.xls;2025-11-20;MACROBIOTICA MI SALUD SANTO DO;-10850;expense;CRC;main_crc;111900000;CP;gastos noviembre 2025.xls
+20251120_406489801_5000_gastos noviembre 2025.xls;2025-11-20;TEF DE: 959932377;5000;transfer;CRC;main_crc;406489801;TF;gastos noviembre 2025.xls
+20251121_406401952_12000_gastos noviembre 2025.xls;2025-11-21;TEF DE: 959932377;12000;transfer;CRC;main_crc;406401952;TF;gastos noviembre 2025.xls
+20251122_406452203_5000_gastos noviembre 2025.xls;2025-11-22;TEF DE: 959932377;5000;transfer;CRC;main_crc;406452203;TF;gastos noviembre 2025.xls
+20251122_406459459_5000_gastos noviembre 2025.xls;2025-11-22;TEF DE: 959932377;5000;transfer;CRC;main_crc;406459459;TF;gastos noviembre 2025.xls
+20251122_406484224_10000_gastos noviembre 2025.xls;2025-11-22;TEF DE: 959932377;10000;transfer;CRC;main_crc;406484224;TF;gastos noviembre 2025.xls
+20251123_112200000_-1400_gastos noviembre 2025.xls;2025-11-23;COFFEE GARDEN\        SAN JOSE;-1400;expense;CRC;main_crc;112200000;CP;gastos noviembre 2025.xls
+20251123_112200000_-6300_gastos noviembre 2025.xls;2025-11-23;AM PM LAGUNILLA\      HEREDIA;-6300;expense;CRC;main_crc;112200000;CP;gastos noviembre 2025.xls
+20251124_112300000_-12685_gastos noviembre 2025.xls;2025-11-24;BAR Y RESTAURANTE TK CSANTO DO;-12685;expense;CRC;main_crc;112300000;CP;gastos noviembre 2025.xls
+20251124_966471171_-2450_gastos noviembre 2025.xls;2025-11-24;SINPE MOVIL Didi___________;-2450;expense;CRC;main_crc;966471171;TF;gastos noviembre 2025.xls
+20251125_112400000_-10900_gastos noviembre 2025.xls;2025-11-25;WALMART HEREDIA ESTE\ HEREDIA;-10900;expense;CRC;main_crc;112400000;CP;gastos noviembre 2025.xls
+20251125_112400000_-6950_gastos noviembre 2025.xls;2025-11-25;RESTAURANTE COSI PASEOHEREDIA;-6950;expense;CRC;main_crc;112400000;CP;gastos noviembre 2025.xls
+20251126_112500000_-700_gastos noviembre 2025.xls;2025-11-26;MUNDOVENDING NAYAX   \HEREDIA;-700;expense;CRC;main_crc;112500000;CP;gastos noviembre 2025.xls
+20251126_406410499_15000_gastos noviembre 2025.xls;2025-11-26;TEF DE: 959932377;15000;transfer;CRC;main_crc;406410499;TF;gastos noviembre 2025.xls
+20251128_406419464_11000_gastos noviembre 2025.xls;2025-11-28;TEF DE: 959932377;11000;transfer;CRC;main_crc;406419464;TF;gastos noviembre 2025.xls
+20251128_966411539_11000_gastos noviembre 2025.xls;2025-11-28;SINPE_Móvil_Sin_Descripcion;11000;income;CRC;main_crc;966411539;TF;gastos noviembre 2025.xls
+20251128_966414766_-9500_gastos noviembre 2025.xls;2025-11-28;SINPE MOVIL Ts_____________;-9500;expense;CRC;main_crc;966414766;TF;gastos noviembre 2025.xls
+20251129_112800000_-10700_gastos noviembre 2025.xls;2025-11-29;AUTO MERCADO SANTO DOMHEREDIA;-10700;expense;CRC;main_crc;112800000;CP;gastos noviembre 2025.xls
+20251129_112800000_-445_gastos noviembre 2025.xls;2025-11-29;SINPE TP\             SAN JOSE;-445;expense;CRC;main_crc;112800000;CP;gastos noviembre 2025.xls
+20251130_112900000_-1186994_gastos noviembre 2025.xls;2025-11-30;FARMAVALUE HEREDIA, SAHEREDIA;-1186994;expense;CRC;main_crc;112900000;CP;gastos noviembre 2025.xls
+20251130_406487232_3000_gastos noviembre 2025.xls;2025-11-30;TEF DE: 959932377;3000;transfer;CRC;main_crc;406487232;TF;gastos noviembre 2025.xls
+20251201_23933_-1750_gastos diciembre 2025.xls;2025-12-01;SEGURO BELD121489;-1750;expense;CRC;main_crc;23933;TF;gastos diciembre 2025.xls
+20251202_406473631_3000_gastos diciembre 2025.xls;2025-12-02;TEF DE: 959932377;3000;transfer;CRC;main_crc;406473631;TF;gastos diciembre 2025.xls
+20251203_120200000_-3885_gastos diciembre 2025.xls;2025-12-03;AMPM BANCO CENTRAL\   SAN JOSE;-3885;expense;CRC;main_crc;120200000;CP;gastos diciembre 2025.xls
+20251203_120200000_-800_gastos diciembre 2025.xls;2025-12-03;MUSI BOULEVARD\       SAN JOSE;-800;expense;CRC;main_crc;120200000;CP;gastos diciembre 2025.xls
+20251203_406436726_7000_gastos diciembre 2025.xls;2025-12-03;TEF DE: 959932377;7000;transfer;CRC;main_crc;406436726;TF;gastos diciembre 2025.xls
+20251203_958479215_-3700_gastos diciembre 2025.xls;2025-12-03;SINPE MOVIL Copias_________;-3700;expense;CRC;main_crc;958479215;TS;gastos diciembre 2025.xls
+20251204_120300000_-4507_gastos diciembre 2025.xls;2025-12-04;SERVICENTRO TOUR     \GOICOECH;-4507;expense;CRC;main_crc;120300000;CP;gastos diciembre 2025.xls
+20251204_406417649_91000_gastos diciembre 2025.xls;2025-12-04;TEF DE: 960893097;91000;income;CRC;main_crc;406417649;TF;gastos diciembre 2025.xls
+20251205_406454277_30000_gastos diciembre 2025.xls;2025-12-05;TEF DE: 959932377;30000;transfer;CRC;main_crc;406454277;TF;gastos diciembre 2025.xls
+20251206_120500248_-91200_gastos diciembre 2025.xls;2025-12-06;E-TICKET E-COMMERCE;-91200;expense;CRC;main_crc;120500248;CP;gastos diciembre 2025.xls
+20251206_406441629_15000_gastos diciembre 2025.xls;2025-12-06;TEF DE: 959932377;15000;transfer;CRC;main_crc;406441629;TF;gastos diciembre 2025.xls
+20251206_406441872_-20000_gastos diciembre 2025.xls;2025-12-06;TEF A : 935430926;-20000;expense;CRC;main_crc;406441872;TF;gastos diciembre 2025.xls
+20251206_958494806_-3000_gastos diciembre 2025.xls;2025-12-06;SINPE MOVIL Concierto______;-3000;expense;CRC;main_crc;958494806;TS;gastos diciembre 2025.xls
+20251207_120600000_-25000_gastos diciembre 2025.xls;2025-12-07;AE VIRTUAL CLASS 5\   PANAMA;-25000;expense;CRC;main_crc;120600000;CP;gastos diciembre 2025.xls
+20251207_120600000_-250_gastos diciembre 2025.xls;2025-12-07;SUPER MEGA MAS Y MAS\ HEREDIA;-250;expense;CRC;main_crc;120600000;CP;gastos diciembre 2025.xls
+20251208_406473250_13000_gastos diciembre 2025.xls;2025-12-08;TEF DE: 959932377;13000;transfer;CRC;main_crc;406473250;TF;gastos diciembre 2025.xls
+20251208_406477014_18700_gastos diciembre 2025.xls;2025-12-08;TEF DE: 959932377;18700;transfer;CRC;main_crc;406477014;TF;gastos diciembre 2025.xls
+20251208_406487082_23000_gastos diciembre 2025.xls;2025-12-08;TEF DE: 959932377;23000;transfer;CRC;main_crc;406487082;TF;gastos diciembre 2025.xls
+20251210_406424747_6000_gastos diciembre 2025.xls;2025-12-10;TEF DE: 959932377;6000;transfer;CRC;main_crc;406424747;TF;gastos diciembre 2025.xls
+20251211_121000000_-12150_gastos diciembre 2025.xls;2025-12-11;SUPER SALON ARTILLERIASAN JOSE;-12150;expense;CRC;main_crc;121000000;CP;gastos diciembre 2025.xls
+20251211_121000000_-18700_gastos diciembre 2025.xls;2025-12-11;SUPER SALON LA GLORIA\SAN JOSE;-18700;expense;CRC;main_crc;121000000;CP;gastos diciembre 2025.xls
+20251211_121000000_-23000_gastos diciembre 2025.xls;2025-12-11;MACROBIOTICA MI SALUD SANTO DO;-23000;expense;CRC;main_crc;121000000;CP;gastos diciembre 2025.xls
+20251212_121100000_-6000_gastos diciembre 2025.xls;2025-12-12;CEVICHES DE LA ESQUIN\SAN JOSE;-6000;expense;CRC;main_crc;121100000;CP;gastos diciembre 2025.xls
+20251212_406460021_15000_gastos diciembre 2025.xls;2025-12-12;TEF DE: 959932377;15000;transfer;CRC;main_crc;406460021;TF;gastos diciembre 2025.xls
+20251212_966549323_10000_gastos diciembre 2025.xls;2025-12-12;SINPE_Móvil_Gas____________;10000;income;CRC;main_crc;966549323;TF;gastos diciembre 2025.xls
+20251213_966452615_5000_gastos diciembre 2025.xls;2025-12-13;SINPE_Móvil_Gas_y_parqueo__;5000;income;CRC;main_crc;966452615;TF;gastos diciembre 2025.xls
+20251213_966561228_11250_gastos diciembre 2025.xls;2025-12-13;SINPE_Móvil_Sin_Descripcion;11250;income;CRC;main_crc;966561228;TF;gastos diciembre 2025.xls
+20251213_970859649_7500_gastos diciembre 2025.xls;2025-12-13;SINPE MOVIL gas_;7500;income;CRC;main_crc;970859649;TS;gastos diciembre 2025.xls
+20251214_121300000_-20000_gastos diciembre 2025.xls;2025-12-14;SERVICENTRO RUTA 20  \SANTO DO;-20000;expense;CRC;main_crc;121300000;CP;gastos diciembre 2025.xls
+20251215_121300167_-726211_gastos diciembre 2025.xls;2025-12-15;MEDISMART CA 50 CLI539511;-726211;expense;CRC;main_crc;121300167;CP;gastos diciembre 2025.xls
+20251215_121400000_-6923_gastos diciembre 2025.xls;2025-12-15;REST OASIS EL CRUCE  \OSA;-6923;expense;CRC;main_crc;121400000;CP;gastos diciembre 2025.xls
+20251215_121400248_-2125_gastos diciembre 2025.xls;2025-12-15;RESTAURANTE SEQUEIRA N1;-2125;expense;CRC;main_crc;121400248;CP;gastos diciembre 2025.xls
+20251215_121400248_-2500_gastos diciembre 2025.xls;2025-12-15;RESTAURANTE SEQUEIRA N1;-2500;expense;CRC;main_crc;121400248;CP;gastos diciembre 2025.xls
+20251215_966486301_53000_gastos diciembre 2025.xls;2025-12-15;SINPE_Móvil_Sin_Descripcion;53000;income;CRC;main_crc;966486301;TF;gastos diciembre 2025.xls
+20251216_121500000_-820_gastos diciembre 2025.xls;2025-12-16;GLOBAL VIA RUTA 27\   SAN JOSE;-820;expense;CRC;main_crc;121500000;CP;gastos diciembre 2025.xls
+20251216_951573990_13000_gastos diciembre 2025.xls;2025-12-16;SINPE_Móvil_Cine_estradas__;13000;income;CRC;main_crc;951573990;TF;gastos diciembre 2025.xls
+20251216_966557693_-6500_gastos diciembre 2025.xls;2025-12-16;SINPE MOVIL Regalo_pablo___;-6500;expense;CRC;main_crc;966557693;TF;gastos diciembre 2025.xls
+20251217_406439573_15000_gastos diciembre 2025.xls;2025-12-17;TEF DE: 959932377;15000;transfer;CRC;main_crc;406439573;TF;gastos diciembre 2025.xls
+20251218_121700000_-27050_gastos diciembre 2025.xls;2025-12-18;JACKETS MASTER       \MONTES D;-27050;expense;CRC;main_crc;121700000;CP;gastos diciembre 2025.xls
+20251218_121700248_-27400_gastos diciembre 2025.xls;2025-12-18;NOVA                        EC;-27400;expense;CRC;main_crc;121700248;CP;gastos diciembre 2025.xls
+20251218_406494041_3000_gastos diciembre 2025.xls;2025-12-18;TEF DE: 959932377;3000;transfer;CRC;main_crc;406494041;TF;gastos diciembre 2025.xls
+20251219_121800000_-22155_gastos diciembre 2025.xls;2025-12-19;FARMACIA LA BOMBA SO DHEREDIA;-22155;expense;CRC;main_crc;121800000;CP;gastos diciembre 2025.xls
+20251219_406458761_25000_gastos diciembre 2025.xls;2025-12-19;TEF DE: 959932377;25000;transfer;CRC;main_crc;406458761;TF;gastos diciembre 2025.xls
+20251219_406466971_-30000_gastos diciembre 2025.xls;2025-12-19;TEF A : 959932377;-30000;transfer;CRC;main_crc;406466971;TF;gastos diciembre 2025.xls
+20251219_406485049_5000_gastos diciembre 2025.xls;2025-12-19;TEF DE: 959932377;5000;transfer;CRC;main_crc;406485049;TF;gastos diciembre 2025.xls
+20251219_406497712_45000_gastos diciembre 2025.xls;2025-12-19;TEF DE: 959932377;45000;transfer;CRC;main_crc;406497712;TF;gastos diciembre 2025.xls
+20251219_966480047_25000_gastos diciembre 2025.xls;2025-12-19;SINPE_Móvil_Sin_Descripcion;25000;income;CRC;main_crc;966480047;TF;gastos diciembre 2025.xls
+20251220_121900000_-11760_gastos diciembre 2025.xls;2025-12-20;FARMACIA LA BOMBA SANTHEREDIA;-11760;expense;CRC;main_crc;121900000;CP;gastos diciembre 2025.xls
+20251220_121900000_-13900_gastos diciembre 2025.xls;2025-12-20;LIBRERIA INTERNACIONALSAN JOSE;-13900;expense;CRC;main_crc;121900000;CP;gastos diciembre 2025.xls
+20251220_121900000_-2360_gastos diciembre 2025.xls;2025-12-20;COCINA MAMA\          CARMEN;-2360;expense;CRC;main_crc;121900000;CP;gastos diciembre 2025.xls
+20251220_406420780_8500_gastos diciembre 2025.xls;2025-12-20;TEF DE: 959932377;8500;transfer;CRC;main_crc;406420780;TF;gastos diciembre 2025.xls
+20251220_406449890_15000_gastos diciembre 2025.xls;2025-12-20;TEF DE: 959932377;15000;transfer;CRC;main_crc;406449890;TF;gastos diciembre 2025.xls
+20251220_958470659_-2800_gastos diciembre 2025.xls;2025-12-20;SINPE MOVIL Baldazo________;-2800;expense;CRC;main_crc;958470659;TS;gastos diciembre 2025.xls
+20251221_122000000_-18000_gastos diciembre 2025.xls;2025-12-21;LIBRERIA INTERNACIONALSAN JOSE;-18000;expense;CRC;main_crc;122000000;CP;gastos diciembre 2025.xls
+20251222_122100000_-3050_gastos diciembre 2025.xls;2025-12-22;DUNKIN LINCOLN PLAZA\ MORAVIA;-3050;expense;CRC;main_crc;122100000;CP;gastos diciembre 2025.xls
+20251222_122100000_-44500_gastos diciembre 2025.xls;2025-12-22;VERTIGO LINCOLN PLAZA\SAN JOSE;-44500;expense;CRC;main_crc;122100000;CP;gastos diciembre 2025.xls
+20251223_122200000_-1300_gastos diciembre 2025.xls;2025-12-23;CAFETIN LEYENDA PREVE\SAN JOSE;-1300;expense;CRC;main_crc;122200000;CP;gastos diciembre 2025.xls
+20251223_122200000_-15000_gastos diciembre 2025.xls;2025-12-23;UNOPETROL BARREAL\    HEREDIA;-15000;expense;CRC;main_crc;122200000;CP;gastos diciembre 2025.xls
+20251223_122200000_-2400_gastos diciembre 2025.xls;2025-12-23;LOS ANTOJOS DE MI ABUESAN JOSE;-2400;expense;CRC;main_crc;122200000;CP;gastos diciembre 2025.xls
+20251223_122200000_-4000_gastos diciembre 2025.xls;2025-12-23;AVENIDA PARQUEOS\     ESCAZU;-4000;expense;CRC;main_crc;122200000;CP;gastos diciembre 2025.xls
+20251223_406444416_25000_gastos diciembre 2025.xls;2025-12-23;TEF DE: 959932377;25000;transfer;CRC;main_crc;406444416;TF;gastos diciembre 2025.xls
+20251223_966531216_4000_gastos diciembre 2025.xls;2025-12-23;SINPE_Móvil_Bandejas_______;4000;income;CRC;main_crc;966531216;TF;gastos diciembre 2025.xls
+20251224_406443905_10000_gastos diciembre 2025.xls;2025-12-24;TEF DE: 959932377;10000;transfer;CRC;main_crc;406443905;TF;gastos diciembre 2025.xls
+20251224_406485546_5000_gastos diciembre 2025.xls;2025-12-24;TEF DE: 959932377;5000;transfer;CRC;main_crc;406485546;TF;gastos diciembre 2025.xls
+20251225_122400000_-18250_gastos diciembre 2025.xls;2025-12-25;BONITA 2\             SAN JOSE;-18250;expense;CRC;main_crc;122400000;CP;gastos diciembre 2025.xls
+20251225_122400000_-3800_gastos diciembre 2025.xls;2025-12-25;SUPER MEGA MAS Y MAS\ HEREDIA;-3800;expense;CRC;main_crc;122400000;CP;gastos diciembre 2025.xls
+20251225_122400000_-4750_gastos diciembre 2025.xls;2025-12-25;SUPER MEGA MAS Y MAS\ HEREDIA;-4750;expense;CRC;main_crc;122400000;CP;gastos diciembre 2025.xls
+20251226_122500000_-800_gastos diciembre 2025.xls;2025-12-26;TRUEBEAUTY\           SAN JOSE;-800;expense;CRC;main_crc;122500000;CP;gastos diciembre 2025.xls
+20251226_406459213_9500_gastos diciembre 2025.xls;2025-12-26;TEF DE: 959932377;9500;transfer;CRC;main_crc;406459213;TF;gastos diciembre 2025.xls
+20251226_406464845_6000_gastos diciembre 2025.xls;2025-12-26;TEF DE: 959932377;6000;transfer;CRC;main_crc;406464845;TF;gastos diciembre 2025.xls
+20251227_122600000_-2800_gastos diciembre 2025.xls;2025-12-27;AM PM SANTO DOMINGO\  HEREDIA;-2800;expense;CRC;main_crc;122600000;CP;gastos diciembre 2025.xls
+20251227_122600000_-3700_gastos diciembre 2025.xls;2025-12-27;SUPER MEGA MAS Y MAS\ HEREDIA;-3700;expense;CRC;main_crc;122600000;CP;gastos diciembre 2025.xls
+20251227_122600000_-5500_gastos diciembre 2025.xls;2025-12-27;SATAY UNIVERSAL\      SAN JOSE;-5500;expense;CRC;main_crc;122600000;CP;gastos diciembre 2025.xls
+20251227_122600000_-5900_gastos diciembre 2025.xls;2025-12-27;SUPER MEGA MAS Y MAS\ HEREDIA;-5900;expense;CRC;main_crc;122600000;CP;gastos diciembre 2025.xls
+20251228_122700000_-2470_gastos diciembre 2025.xls;2025-12-28;MXM STO DOMING OCN00PVHEREDIA;-2470;expense;CRC;main_crc;122700000;CP;gastos diciembre 2025.xls
+20251228_122700000_-9500_gastos diciembre 2025.xls;2025-12-28;PIEL DE MIEL\         HEREDIA;-9500;expense;CRC;main_crc;122700000;CP;gastos diciembre 2025.xls
+20251229_406402114_15000_gastos diciembre 2025.xls;2025-12-29;TEF DE: 959932377;15000;transfer;CRC;main_crc;406402114;TF;gastos diciembre 2025.xls
+20251231_123000000_-4200_gastos diciembre 2025.xls;2025-12-31;MINISO PLAZA LA CULTURSAN JOSE;-4200;expense;CRC;main_crc;123000000;CP;gastos diciembre 2025.xls
+20251231_123000000_-4407_gastos diciembre 2025.xls;2025-12-31;VIVERO RIO FRIO       SANTO DO;-4407;expense;CRC;main_crc;123000000;CP;gastos diciembre 2025.xls
+20251231_406427158_15000_gastos diciembre 2025.xls;2025-12-31;TEF DE: 959932377;15000;transfer;CRC;main_crc;406427158;TF;gastos diciembre 2025.xls
+20260101_123100000_-10290_gastos enero 2026.xls;2026-01-01;DUNKIN AVENIDA CENTRALSAN JOSE;-10290;expense;CRC;main_crc;123100000;CP;gastos enero 2026.xls
+20260101_39932_-17745_gastos enero 2026.xls;2026-01-01;SEGURO BELD121489;-17745;expense;CRC;main_crc;39932;TF;gastos enero 2026.xls
+20260102_10100000_-12250_gastos enero 2026.xls;2026-01-02;CENTRO DE ARTICULOS CHSAN JOSE;-12250;expense;CRC;main_crc;10100000;CP;gastos enero 2026.xls
+20260103_10200000_-700_gastos enero 2026.xls;2026-01-03;MUNDOVENDING NAYAX   \HEREDIA;-700;expense;CRC;main_crc;10200000;CP;gastos enero 2026.xls
+20260105_406466451_9900_gastos enero 2026.xls;2026-01-05;TEF DE: 959932377;9900;transfer;CRC;main_crc;406466451;TF;gastos enero 2026.xls
+20260107_10600000_-1530_gastos enero 2026.xls;2026-01-07;MXM STO DOMING OCN00PVHEREDIA;-1530;expense;CRC;main_crc;10600000;CP;gastos enero 2026.xls
+20260107_10600000_-8910_gastos enero 2026.xls;2026-01-07;LIBRERIA INTERNACIONALSAN JOSE;-8910;expense;CRC;main_crc;10600000;CP;gastos enero 2026.xls
+20260108_406441929_6000_gastos enero 2026.xls;2026-01-08;TEF DE: 959932377;6000;transfer;CRC;main_crc;406441929;TF;gastos enero 2026.xls
+20260108_406442437_3000_gastos enero 2026.xls;2026-01-08;TEF DE: 959932377;3000;transfer;CRC;main_crc;406442437;TF;gastos enero 2026.xls
+20260108_966509165_-6900_gastos enero 2026.xls;2026-01-08;SINPE MOVIL Moyo___________;-6900;expense;CRC;main_crc;966509165;TF;gastos enero 2026.xls
+20260109_10800000_-3100_gastos enero 2026.xls;2026-01-09;GESSA PERI LA GRAN VIASAN JOSE;-3100;expense;CRC;main_crc;10800000;CP;gastos enero 2026.xls
+20260109_406429718_15000_gastos enero 2026.xls;2026-01-09;TEF DE: 959932377;15000;transfer;CRC;main_crc;406429718;TF;gastos enero 2026.xls
+20260109_406464715_50000_gastos enero 2026.xls;2026-01-09;TEF DE: 959932377;50000;transfer;CRC;main_crc;406464715;TF;gastos enero 2026.xls
+20260109_966480984_-10000_gastos enero 2026.xls;2026-01-09;SINPE MOVIL Mermeladas_____;-10000;expense;CRC;main_crc;966480984;TF;gastos enero 2026.xls
+20260112_11100000_-12900_gastos enero 2026.xls;2026-01-12;H&M\                  SAN JOSE;-12900;expense;CRC;main_crc;11100000;CP;gastos enero 2026.xls
+20260112_11100000_-2620_gastos enero 2026.xls;2026-01-12;AM PM LAGUNILLA\      HEREDIA;-2620;expense;CRC;main_crc;11100000;CP;gastos enero 2026.xls
+20260112_11100000_-9225_gastos enero 2026.xls;2026-01-12;BATH & BODY WORKS\    SAN JOSE;-9225;expense;CRC;main_crc;11100000;CP;gastos enero 2026.xls
+20260112_11100000_-9700_gastos enero 2026.xls;2026-01-12;PIZZA HUT MULTIPLAZA EESCAZU;-9700;expense;CRC;main_crc;11100000;CP;gastos enero 2026.xls
+20260112_966538815_-2790_gastos enero 2026.xls;2026-01-12;SINPE MOVIL Uber___________;-2790;expense;CRC;main_crc;966538815;TF;gastos enero 2026.xls
+20260113_406477915_10000_gastos enero 2026.xls;2026-01-13;TEF DE: 959932377;10000;transfer;CRC;main_crc;406477915;TF;gastos enero 2026.xls
+20260114_11300000_-7255_gastos enero 2026.xls;2026-01-14;MEDISMART             TIBAS;-7255;expense;CRC;main_crc;11300000;CP;gastos enero 2026.xls
+20260114_966509372_-2880_gastos enero 2026.xls;2026-01-14;SINPE MOVIL Didi___________;-2880;expense;CRC;main_crc;966509372;TF;gastos enero 2026.xls
+20260114_966546818_50000_gastos enero 2026.xls;2026-01-14;SINPE_Móvil_Sin_Descripcion;50000;income;CRC;main_crc;966546818;TF;gastos enero 2026.xls
+20260115_11400000_-1507173_gastos enero 2026.xls;2026-01-15;WEBCHECKOUT NAVIERA T\SAN JOSE;-1507173;expense;CRC;main_crc;11400000;CP;gastos enero 2026.xls
+20260117_11600000_-810_gastos enero 2026.xls;2026-01-17;NAVIERA TAMBOR       \PUNTAREN;-810;expense;CRC;main_crc;11600000;CP;gastos enero 2026.xls
+20260117_11600000_-9600_gastos enero 2026.xls;2026-01-17;SODA FERRY TAMBOR 4 (1PUNTAREN;-9600;expense;CRC;main_crc;11600000;CP;gastos enero 2026.xls
+20260117_966443222_-10000_gastos enero 2026.xls;2026-01-17;SINPE MOVIL Fotos__________;-10000;expense;CRC;main_crc;966443222;TF;gastos enero 2026.xls
+20260118_11700000_-1220_gastos enero 2026.xls;2026-01-18;PALI PAQUERA VCN00PV\ PUNTAREN;-1220;expense;CRC;main_crc;11700000;CP;gastos enero 2026.xls
+20260118_966839942_-1900_gastos enero 2026.xls;2026-01-18;SINPE MOVIL Uber___________;-1900;expense;CRC;main_crc;966839942;TF;gastos enero 2026.xls
+20260119_11800000_-1597326_gastos enero 2026.xls;2026-01-19;WEBCHECKOUT NAVIERA T\SAN JOSE;-1597326;expense;CRC;main_crc;11800000;CP;gastos enero 2026.xls
+20260120_11900000_-1340_gastos enero 2026.xls;2026-01-20;PALI PAQUERA VCN00PV\ PUNTAREN;-1340;expense;CRC;main_crc;11900000;CP;gastos enero 2026.xls
+20260120_11900000_-3100_gastos enero 2026.xls;2026-01-20;TIENDA TO GO FERRY TAMPUNTAREN;-3100;expense;CRC;main_crc;11900000;CP;gastos enero 2026.xls
+20260120_958481963_-1000_gastos enero 2026.xls;2026-01-20;SINPE MOVIL Limones________;-1000;expense;CRC;main_crc;958481963;TS;gastos enero 2026.xls
+20260121_12000000_-400_gastos enero 2026.xls;2026-01-21;MUNDOVENDING NAYAX   \HEREDIA;-400;expense;CRC;main_crc;12000000;CP;gastos enero 2026.xls
+20260121_12000000_-6225_gastos enero 2026.xls;2026-01-21;POPS LAGUNILLA HEREDIAHEREDIA;-6225;expense;CRC;main_crc;12000000;CP;gastos enero 2026.xls
+20260121_406415396_2000_gastos enero 2026.xls;2026-01-21;TEF DE: 959932377;2000;transfer;CRC;main_crc;406415396;TF;gastos enero 2026.xls
+20260122_12100000_-1710_gastos enero 2026.xls;2026-01-22;SUPER MEGA MAS Y MAS\ HEREDIA;-1710;expense;CRC;main_crc;12100000;CP;gastos enero 2026.xls
+20260122_406491576_5000_gastos enero 2026.xls;2026-01-22;TEF DE: 959932377;5000;transfer;CRC;main_crc;406491576;TF;gastos enero 2026.xls
+20260123_406495765_10850_gastos enero 2026.xls;2026-01-23;TEF DE: 959932377;10850;transfer;CRC;main_crc;406495765;TF;gastos enero 2026.xls
+20260123_406496249_25000_gastos enero 2026.xls;2026-01-23;TEF DE: 959932377;25000;transfer;CRC;main_crc;406496249;TF;gastos enero 2026.xls
+20260123_406497777_2500_gastos enero 2026.xls;2026-01-23;TEF DE: 959932377;2500;transfer;CRC;main_crc;406497777;TF;gastos enero 2026.xls
+20260123_966484811_-5000_gastos enero 2026.xls;2026-01-23;SINPE MOVIL Sushi__________;-5000;expense;CRC;main_crc;966484811;TF;gastos enero 2026.xls
+20260123_966557234_5000_gastos enero 2026.xls;2026-01-23;SINPE_Móvil_Gas____________;5000;income;CRC;main_crc;966557234;TF;gastos enero 2026.xls
+20260124_12300000_-1344_gastos enero 2026.xls;2026-01-24;AMPM BANCO CENTRAL\   SAN JOSE;-1344;expense;CRC;main_crc;12300000;CP;gastos enero 2026.xls
+20260124_12300000_-440_gastos enero 2026.xls;2026-01-24;SINPE TP\             SAN JOSE;-440;expense;CRC;main_crc;12300000;CP;gastos enero 2026.xls
+20260124_406439275_10000_gastos enero 2026.xls;2026-01-24;TEF DE: 959932377;10000;transfer;CRC;main_crc;406439275;TF;gastos enero 2026.xls
+20260125_12400000_-10000_gastos enero 2026.xls;2026-01-25;SERVICENTRO RUTA 20  \SANTO DO;-10000;expense;CRC;main_crc;12400000;CP;gastos enero 2026.xls
+20260125_12400000_-3850_gastos enero 2026.xls;2026-01-25;COCINA MAMA\          CARMEN;-3850;expense;CRC;main_crc;12400000;CP;gastos enero 2026.xls
+20260125_406488456_12000_gastos enero 2026.xls;2026-01-25;TEF DE: 959932377;12000;transfer;CRC;main_crc;406488456;TF;gastos enero 2026.xls
+20260126_12500000_-10850_gastos enero 2026.xls;2026-01-26;LIBRERIA INTERNACIONALSAN JOSE;-10850;expense;CRC;main_crc;12500000;CP;gastos enero 2026.xls
+20260126_12500000_-17100_gastos enero 2026.xls;2026-01-26;MXM STO DOMING OCN00PVHEREDIA;-17100;expense;CRC;main_crc;12500000;CP;gastos enero 2026.xls
+20260126_12500000_-3500_gastos enero 2026.xls;2026-01-26;BURGER KING CURRIDABATCURRIDAB;-3500;expense;CRC;main_crc;12500000;CP;gastos enero 2026.xls
+20260127_12600000_-9900_gastos enero 2026.xls;2026-01-27;SUBWAY SANTO DOMINGO\ HEREDIA;-9900;expense;CRC;main_crc;12600000;CP;gastos enero 2026.xls
+20260127_12600000_-9995_gastos enero 2026.xls;2026-01-27;PRICE SMART\          HEREDIA;-9995;expense;CRC;main_crc;12600000;CP;gastos enero 2026.xls
+20260128_406416063_2000_gastos enero 2026.xls;2026-01-28;TEF DE: 959932377;2000;transfer;CRC;main_crc;406416063;TF;gastos enero 2026.xls
+20260129_406415997_4000_gastos enero 2026.xls;2026-01-29;TEF DE: 959932377;4000;transfer;CRC;main_crc;406415997;TF;gastos enero 2026.xls
+20260130_12900000_-2200_gastos enero 2026.xls;2026-01-30;COSECHAS CORREO CR   \SAN JOSE;-2200;expense;CRC;main_crc;12900000;CP;gastos enero 2026.xls
+20260130_12900000_-440_gastos enero 2026.xls;2026-01-30;SINPE TP\             SAN JOSE;-440;expense;CRC;main_crc;12900000;CP;gastos enero 2026.xls
+20260130_406403081_5000_gastos enero 2026.xls;2026-01-30;TEF DE: 959932377;5000;transfer;CRC;main_crc;406403081;TF;gastos enero 2026.xls
+20260131_13023841_-4320_gastos enero 2026.xls;2026-01-31;PEDIDOS YA RESTAURANTE CYBS EC;-4320;expense;CRC;main_crc;13023841;CP;gastos enero 2026.xls
+20260131_966527159_-3050_gastos enero 2026.xls;2026-01-31;SINPE MOVIL Didi___________;-3050;expense;CRC;main_crc;966527159;TF;gastos enero 2026.xls
