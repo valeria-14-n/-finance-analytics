@@ -137,7 +137,7 @@ def main():
     out_path = OUT_DIR / "transactions_raw_combined.csv"
     combined.to_csv(out_path, index=False, encoding="utf-8", sep=";")
 
-    print(f"✅ Listo: {out_path} ({len(combined)} filas)")
+    print(f"Listo: {out_path} ({len(combined)} filas)")
     print("Columnas:", list(combined.columns))
 
 

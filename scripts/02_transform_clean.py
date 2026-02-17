@@ -101,7 +101,7 @@ def main():
     # Export with ; so Excel opens it in columns (CR locale)
     out.to_csv(OUT_PATH, index=False, encoding="utf-8", sep=";")
 
-    print(f"✅ Listo: {OUT_PATH} ({len(out)} filas)")
+    print(f" Listo: {OUT_PATH} ({len(out)} filas)")
     print("Type counts:\n", out["type"].value_counts())
 
 

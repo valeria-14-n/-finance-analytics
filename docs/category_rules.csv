@@ -1,0 +1,43 @@
+priority,pattern,category
+1,959932377,Transfers
+1,958938953,Transfers
+
+2,mundovending,Dining
+2,didi|uber,Transport
+2,servicentro|gasolinera|estacion de servicio|ruta 20|cicsa|unopetrol|uno petrol|ruta 27|global via|parqueos,Transport
+2,pali,Groceries
+2,cocina mama,Dining
+2,sinpe tp,Transport
+2,sinpe.*gas|gasolina,Transport
+2,farmacia la bomba,Health
+2,h&m,Shopping
+2,pizza hut,Dining
+2,vivero rio frio,Shopping
+2,tienda to go ferry,Travel
+
+3,mxm|mas x menos|am pm|ampm|gessa|auto mercado|super|pricesmart|walmart,Groceries
+
+4,dunkin|coffee|caf[eé]|pops|pasteleria|granier|ceviches|restaurante|bar y restaurante|satay|cosechas|leblon|starbucks|arcos dorados|antoj,Dining
+4,rest oasis|oasis el cruce,Dining
+
+5,seguro,Insurance
+
+6,farmavalue|macrobiotica|caja seguro|clinica|hospital|medismart,Health
+
+7,mundo cosmetico|truebeauty|bath & body|piel de miel,Personal Care
+
+8,libreria internacional|virtual class|udemy|curso,Education
+8,concierto|cine,Entertainment
+8,regalo,Gifts
+
+9,vertigo|musi|e-ticket,Entertainment
+9,copias,Education
+9,mascarillas,Personal Care
+
+10,naviera|webcheckout naviera|tambor,Travel
+
+11,castillo country club,Fitness
+
+12,miniso|jackets|bonita|centro de articulos,Shopping
+
+999,.*,Other
