@@ -1,6 +1,7 @@
 priority,pattern,category
 1,959932377,Transfers
 1,958938953,Transfers
+1,^tef de:|^tef a :,Transfers
 
 2,mundovending,Dining
 2,didi|uber,Transport
@@ -16,9 +17,12 @@ priority,pattern,category
 2,tienda to go ferry,Travel
 
 3,mxm|mas x menos|am pm|ampm|gessa|auto mercado|super|pricesmart|walmart,Groceries
+3,price\s*smart|pricesmart,Groceries
+3,sinpe.*(limones|mermeladas|sushi),Groceries
 
 4,dunkin|coffee|caf[eé]|pops|pasteleria|granier|ceviches|restaurante|bar y restaurante|satay|cosechas|leblon|starbucks|arcos dorados|antoj,Dining
 4,rest oasis|oasis el cruce,Dining
+4,burger\s*king|subway|moyo|sushi,Dining
 
 5,seguro,Insurance
 
@@ -39,5 +43,6 @@ priority,pattern,category
 11,castillo country club,Fitness
 
 12,miniso|jackets|bonita|centro de articulos,Shopping
+12,sinpe.*(bandejas|fotos|gorrito),Shopping
 
 999,.*,Other

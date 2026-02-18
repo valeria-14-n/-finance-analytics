@@ -1,80 +1,69 @@
-import re
 from pathlib import Path
 import pandas as pd
 
 IN_PATH = Path("data_clean/transactions_clean.csv")
-OUT_PATH = Path("data_clean/transactions_categorized.csv")
 RULES_PATH = Path("docs/category_rules.csv")
-SEP_IN = ";"
+OUT_PATH = Path("data_clean/transactions_categorized.csv")
 
-
-def load_rules(path: Path) -> pd.DataFrame:
-    if not path.exists():
-        raise SystemExit(f"No existe {path}. Crea docs/category_rules.csv primero.")
-
-    rules = pd.read_csv(path, encoding="utf-8")
-    required = {"priority", "pattern", "category"}
-    missing = required - set(rules.columns)
-    if missing:
-        raise ValueError(f"Faltan columnas en category_rules.csv: {missing}")
-
-    rules["priority"] = pd.to_numeric(rules["priority"], errors="coerce")
-    rules = rules.dropna(subset=["priority", "pattern", "category"])
-    rules = rules.sort_values("priority").reset_index(drop=True)
-    return rules
-
-
-def categorize_description(desc: str, rules: pd.DataFrame) -> str:
-    d = "" if pd.isna(desc) else str(desc).strip().lower()
-    for _, row in rules.iterrows():
-        pattern = str(row["pattern"])
-        if re.search(pattern, d, flags=re.IGNORECASE):
-            return str(row["category"])
-    return "Other"
+CSV_SEP = ";"  # your regional setting outputs
 
 
 def main():
     if not IN_PATH.exists():
         raise SystemExit(f"No existe {IN_PATH}. Corre 02_transform_clean.py primero.")
+    if not RULES_PATH.exists():
+        raise SystemExit(f"No existe {RULES_PATH}. Crea docs/mappings/category_rules.csv")
 
-    df = pd.read_csv(IN_PATH, sep=SEP_IN, encoding="utf-8")
+    df = pd.read_csv(IN_PATH, encoding="utf-8", sep=CSV_SEP)
 
-    rules = load_rules(RULES_PATH)
+    # IMPORTANT: your rules file looks comma-separated in your example.
+    # If you opened it in Excel CR, it might have become ';'.
+    # We'll auto-detect using python engine + sep=None.
+    rules = pd.read_csv(RULES_PATH, encoding="utf-8", sep=None, engine="python")
 
-    df["category"] = None
-    df.loc[df["type"] == "transfer", "category"] = "Transfers"
+    required = {"priority", "pattern", "category"}
+    missing = required - set(rules.columns)
+    if missing:
+        raise ValueError(f"category_rules.csv le faltan columnas: {missing}. Tiene: {list(rules.columns)}")
 
+    rules = rules.copy()
+    rules["priority"] = pd.to_numeric(rules["priority"], errors="coerce").fillna(999).astype(int)
+    rules["pattern"] = rules["pattern"].astype(str)
+    rules["category"] = rules["category"].astype(str)
 
-    mask = df["category"].isna()
-    df.loc[mask, "category"] = df.loc[mask, "description"].apply(
-        lambda x: categorize_description(x, rules)
-    )
+    rules = rules.sort_values(["priority"]).reset_index(drop=True)
 
-    df["merchant"] = df["description"].astype(str).str.strip().str.split().str[0].str.upper()
-    
-    cols = list(df.columns)
-    preferred = [
-        "transaction_id", "date", "description", "merchant",
-        "amount", "type", "category",
-        "currency", "account", "reference", "code", "source_file"
-    ]
-    final_cols = [c for c in preferred if c in cols] + [c for c in cols if c not in preferred]
-    df = df[final_cols]
-    df["category"] = df["category"].astype(str).str.strip()
+    # Apply rule engine: first match wins
+    df["category"] = pd.NA
 
-    df.to_csv(OUT_PATH, index=False, encoding="utf-8", sep=";")
+    haystack = (df["merchant_raw"].fillna("") + " " + df["merchant"].fillna("")).astype(str)
 
-    print(f" Listo: {OUT_PATH} ({len(df)} filas)")
-    print("Top categories:\n", df["category"].value_counts().head(10))
-    print("\nTop OTHER descriptions:\n")
-    print(
-    df[df["category"] == "Other"]["description"]
-    .value_counts()
-    .head(20)
-)
+    for _, r in rules.iterrows():
+        patt = r["pattern"]
+        cat = r["category"]
+        mask = haystack.str.contains(patt, case=False, na=False, regex=True)
+        df.loc[mask & df["category"].isna(), "category"] = cat
+
+    # fallback (in case rule 999 missing)
+    df["category"] = df["category"].fillna("Other")
+
+    # Keep consistency: transfers category -> type transfer (optional but recommended)
+    df.loc[df["category"].str.upper().eq("TRANSFERS"), "type"] = "transfer"
+    # Force alignment: if it's a transfer movement, category should be Transfers
+    df.loc[df["type"].eq("transfer"), "category"] = "Transfers"
+    df.loc[df["category"].str.lower().eq("transfers"), "type"] = "transfer"
+
+    df.to_csv(OUT_PATH, index=False, encoding="utf-8", sep=CSV_SEP)
+
+    print(f"Listo: {OUT_PATH} ({len(df)} filas)")
+    print("Category counts:\n", df["category"].value_counts())
+    print("Type counts:\n", df["type"].value_counts())
+    print("\nTop OTHER merchants:\n",
+        df[df["category"] == "Other"]["merchant"]
+        .value_counts()
+        .head(20))
 
 
 if __name__ == "__main__":
     main()
-
 
