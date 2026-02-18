@@ -5,7 +5,7 @@ IN_PATH = Path("data_clean/transactions_clean.csv")
 RULES_PATH = Path("docs/category_rules.csv")
 OUT_PATH = Path("data_clean/transactions_categorized.csv")
 
-CSV_SEP = ";"  # your regional setting outputs
+CSV_SEP = ";"  
 
 
 def main():
@@ -46,6 +46,10 @@ def main():
 
     # fallback (in case rule 999 missing)
     df["category"] = df["category"].fillna("Other")
+    
+    # --- Safety alignment between type and category ---
+    df.loc[df["type"].eq("transfer"), "category"] = "Transfers"
+    df.loc[df["category"].str.lower().eq("transfers"), "type"] = "transfer"
 
     # Keep consistency: transfers category -> type transfer (optional but recommended)
     df.loc[df["category"].str.upper().eq("TRANSFERS"), "type"] = "transfer"
