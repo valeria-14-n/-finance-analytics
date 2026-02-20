@@ -61,3 +61,4 @@ CREATE TABLE IF NOT EXISTS transactions (
   INDEX ix_tx_type (type)
 );
 
+
