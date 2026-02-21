@@ -57,12 +57,41 @@ def _parse_num(s: pd.Series) -> pd.Series:
     x = (
         s.astype(str)
         .str.strip()
-        .str.replace("\u00a0", "", regex=False)  
-        .str.replace(" ", "", regex=False)       
-        .str.replace(".", "", regex=False)       
-        .str.replace(",", ".", regex=False)      
+        .str.replace("\u00a0", "", regex=False)  # NBSP
+        .str.replace(" ", "", regex=False)       # spaces
     )
-    return pd.to_numeric(x, errors="coerce").fillna(0)
+
+    def smart_parse(v: str) -> float:
+        if v == "" or v.lower() == "nan":
+            return 0.0
+
+        has_comma = "," in v
+        has_dot = "." in v
+
+        # Case 1: both separators exist -> rightmost one is decimal
+        if has_comma and has_dot:
+            last_comma = v.rfind(",")
+            last_dot = v.rfind(".")
+            if last_comma > last_dot:
+                # comma is decimal, dots are thousands
+                v2 = v.replace(".", "").replace(",", ".")
+            else:
+                # dot is decimal, commas are thousands
+                v2 = v.replace(",", "")
+            return float(v2)
+
+        # Case 2: only comma -> comma is decimal
+        if has_comma and not has_dot:
+            return float(v.replace(".", "").replace(",", "."))
+
+        # Case 3: only dot -> dot is decimal (do NOT remove it)
+        if has_dot and not has_comma:
+            return float(v.replace(",", ""))
+
+        # Case 4: no separators
+        return float(v)
+
+    return pd.to_numeric(x.map(smart_parse), errors="coerce").fillna(0)
 
 
 def _standardize_columns(cols) -> list[str]:

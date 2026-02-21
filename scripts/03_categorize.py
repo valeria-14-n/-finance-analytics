@@ -15,8 +15,7 @@ def main():
         raise SystemExit(f"No existe {RULES_PATH}. Crea docs/mappings/category_rules.csv")
 
     df = pd.read_csv(IN_PATH, encoding="utf-8", sep=CSV_SEP)
-
-    # IMPORTANT: your rules file looks comma-separated in your example.
+    
     # If you opened it in Excel CR, it might have become ';'.
     # We'll auto-detect using python engine + sep=None.
     rules = pd.read_csv(RULES_PATH, encoding="utf-8", sep=None, engine="python")
