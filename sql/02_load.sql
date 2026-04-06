@@ -1,4 +1,4 @@
-CREATE TABLE stg_transactions_raw (
+CREATE TABLE IF NOT EXISTS stg_transactions_raw (
   transaction_id_raw VARCHAR(120),
   `date` VARCHAR(30),
   description VARCHAR(255),
@@ -27,7 +27,9 @@ SELECT
 FROM stg_transactions_raw;
 
 
-#Poblar dimensiones
+/*Poblar dimensiones*/
+
+USE finance_ops;
 
 INSERT IGNORE INTO dim_category (category_name)
 SELECT DISTINCT category
@@ -42,13 +44,15 @@ WHERE merchant IS NOT NULL AND merchant <> '';
 SELECT COUNT(*) AS categories FROM dim_category;
 SELECT COUNT(*) AS merchants FROM dim_merchant;
 
-ALTER TABLE transactions
-  ADD UNIQUE KEY uq_source_row_hash (source_row_hash);
+
+
+
+
 
 INSERT IGNORE INTO transactions (
-transaction_date, amount, type,
-category_id, merchant_id, payment_method_id,
-notes, source_file, source_row_hash
+  transaction_date, amount, type,
+  category_id, merchant_id, payment_method_id,
+  notes, source_file, source_row_hash
 )
 SELECT
   s.transaction_date,
@@ -63,6 +67,9 @@ SELECT
 FROM vw_stg_typed s
 LEFT JOIN dim_category c ON c.category_name = s.category
 LEFT JOIN dim_merchant m ON m.merchant_norm = LOWER(TRIM(s.merchant));
+
+
+
 
 SELECT COUNT(*) AS fact_rows FROM transactions;
 

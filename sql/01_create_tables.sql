@@ -56,7 +56,8 @@ CREATE TABLE IF NOT EXISTS transactions (
   FOREIGN KEY (category_id) REFERENCES dim_category(category_id),
   FOREIGN KEY (merchant_id) REFERENCES dim_merchant(merchant_id),
   FOREIGN KEY (payment_method_id) REFERENCES dim_payment_method(payment_method_id),
-
+  UNIQUE KEY uq_source_row_hash (source_row_hash),
+  
   INDEX ix_tx_date (transaction_date),
   INDEX ix_tx_type (type)
 );
