@@ -1,6 +1,6 @@
 #  Finance Ops Analytics
 
-> Turning 3 months of personal bank data into a production-grade analytics pipeline — built the way a company would.
+> Turning 3 months of personal bank data into a production-grade analytics pipeline.
 
 ---
 
@@ -20,7 +20,7 @@ Most people check their bank app once a month and move on. This project treats *
 
 ##  Project Structure
 
-
+```text
 finance-analytics/
 │
 ├── scripts/
