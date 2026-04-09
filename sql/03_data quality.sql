@@ -1,17 +1,32 @@
--- D1.2 Top merchants with NULL category_id
+-- ============================================================
+-- 03_data_quality.sql · Validaciones de calidad
+-- ============================================================
+
+USE finance_ops;
+
+-- D1.1 % de nulls por columna clave
 SELECT
-  COALESCE(m.merchant_name, '(NO MERCHANT)') AS merchant,
-  COUNT(*) AS tx_count,
-  ROUND(SUM(ABS(t.amount)), 2) AS total_abs_amount
+  COUNT(*)                                              AS total_rows,
+  ROUND(SUM(category_id IS NULL)    / COUNT(*) * 100, 1) AS pct_null_category,
+  ROUND(SUM(merchant_id IS NULL)    / COUNT(*) * 100, 1) AS pct_null_merchant,
+  ROUND(SUM(payment_method_id IS NULL) / COUNT(*) * 100, 1) AS pct_null_payment_method,
+  ROUND(SUM(notes IS NULL)          / COUNT(*) * 100, 1) AS pct_null_notes
+FROM transactions;
+
+-- D1.2 Top merchants sin category_id asignado
+SELECT
+  COALESCE(m.merchant_name, '(NO MERCHANT)')  AS merchant,
+  COUNT(*)                                     AS tx_count,
+  ROUND(SUM(ABS(t.amount)), 2)                 AS total_abs_amount
 FROM transactions t
 LEFT JOIN dim_merchant m ON m.merchant_id = t.merchant_id
 WHERE t.type = 'expense'
   AND t.category_id IS NULL
 GROUP BY COALESCE(m.merchant_name, '(NO MERCHANT)')
-ORDER BY total_abs_amount DESC, tx_count DESC
+ORDER BY total_abs_amount DESC
 LIMIT 20;
 
--- D1.3A Extreme amounts per category (Top 5 per category)
+-- D1.3A Top 5 montos extremos por categoría
 WITH ranked AS (
   SELECT
     c.category_name,
@@ -27,21 +42,17 @@ WITH ranked AS (
   LEFT JOIN dim_merchant m ON m.merchant_id = t.merchant_id
   WHERE t.type = 'expense'
 )
-SELECT
-  category_name,
-  merchant_name,
-  transaction_date,
-  amount
+SELECT category_name, merchant_name, transaction_date, amount
 FROM ranked
 WHERE rn <= 5
 ORDER BY category_name, rn;
 
--- D1.3B Outliers using 3-sigma rule within each category (expenses)
+-- D1.3B Outliers por regla 3-sigma dentro de cada categoría
 WITH stats AS (
   SELECT
     c.category_id,
     c.category_name,
-    AVG(ABS(t.amount)) AS avg_abs_amt,
+    AVG(ABS(t.amount))        AS avg_abs_amt,
     STDDEV_SAMP(ABS(t.amount)) AS sd_abs_amt
   FROM transactions t
   JOIN dim_category c ON c.category_id = t.category_id
@@ -65,16 +76,16 @@ flagged AS (
 SELECT *
 FROM flagged
 WHERE z_score >= 2
-ORDER BY z_score DESC, ABS(amount) DESC
+ORDER BY z_score DESC
 LIMIT 50;
 
--- Check variability per category
+-- D1.4 Variabilidad por categoría (para detectar categorías inestables)
 SELECT
   c.category_name,
-  COUNT(*) AS n,
-  ROUND(AVG(ABS(t.amount)),2) AS avg_abs_amt,
-  ROUND(STDDEV_SAMP(ABS(t.amount)),2) AS sd_abs_amt,
-  ROUND(MAX(ABS(t.amount)),2) AS max_abs_amt
+  COUNT(*)                            AS n,
+  ROUND(AVG(ABS(t.amount)), 2)        AS avg_abs_amt,
+  ROUND(STDDEV_SAMP(ABS(t.amount)), 2) AS sd_abs_amt,
+  ROUND(MAX(ABS(t.amount)), 2)        AS max_abs_amt
 FROM transactions t
 JOIN dim_category c ON c.category_id = t.category_id
 WHERE t.type = 'expense'

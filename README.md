@@ -6,172 +6,89 @@
 
 ## 📌 Overview
 
-Most people look at their bank statement once a month and forget about it. This project treats **personal finances as an operational dataset** — with proper data modeling, SQL analytics, and a Power BI dashboard built to answer real business questions:
+Most people check their bank app once a month and move on. This project treats **personal finances as an operational dataset**. I built a full data model, SQL warehouse, and Power BI dashboard to answer real-world financial questions:
 
-- Where is the money actually going?
-- What changed vs. last month?
-- Which categories are out of control?
-- What will I spend by end of month?
+- **Where is the money actually going?** (Pareto 80/20 Analysis)
+- **How much does my spending fluctuate?** (Volatility & Variance)
+- **Which merchants are eating up my budget?** (Concentration)
+- **Am I on track or overspending?** (Run Rate Projection)
 
-**Stack:** Python · MySQL · Power BI  
-**Data:** 3 months of personal bank exports (Nov 2025 – Jan 2026) · 210 transactions · ₡CRC
+**Stack:** Python (ETL) · MySQL (Warehouse) · Power BI (Viz)  
+**Data:** 3 months of bank exports (Nov 2025 – Jan 2026) · 210 transactions · ₡CRC
 
 ---
 
 ## 🗂️ Project Structure
 
-```
+
 finance-analytics/
 │
-├── data_raw/               # Original bank exports (.xls) — not committed
-├── data_clean/             # Processed CSVs ready for loading
-│
 ├── scripts/
-│   ├── 01_etl_combine_xls.py       # Merge monthly exports into one file
-│   ├── 02_transform_clean.py       # Normalize dates, amounts, merchants
-│   ├── 03_categorize.py            # Rule-based category assignment
-│   └── etl_02_amount_from_balance.py
+│   ├── 01_etl_combine_xls.py       # Merging monthly bank .xls exports
+│   ├── 02_transform_clean.py       # Cleaning dates, amounts, and signs
+│   └── 03_categorize.py            # Rule-based category assignment
 │
 ├── sql/
-│   ├── 01_create_tables.sql        # Star schema: transactions + 4 dimensions
-│   ├── 02_load.sql                 # ETL: staging → dimensions → fact table
-│   ├── 03_data_quality.sql         # Null checks, outliers, 3-sigma flagging
-│   ├── 04_core_metrics.sql         # MoM change, run rate, percentiles
-│   ├── 05_segmentation.sql         # By payment method, day of week, merchant
-│   └── 06_alerts.sql               # 2σ alerts, budget burn (in progress)
+│   ├── 01_create_tables.sql        # Star Schema (Fact + 4 Dimensions)
+│   ├── 02_load.sql                 # ETL from Staging to Final tables
+│   └── 04_core_metrics.sql         # MoM change, averages, and variance
 │
-├── docs/
-│   ├── category_rules.csv          # Merchant → category mapping
-│   ├── transfer_identifiers.txt    # Rules to detect transfers vs. expenses
-│   └── project_log.md              # Decision log
-│
-├── powerbi/                        # Dashboard (.pbix) — coming soon
+├── powerbi/
+│   ├── Finance_Ops_Dashboard.pbix  # The final report
+│   └── dax_measures.txt            # Backup of DAX formulas
 └── README.md
-```
+
+
+## 📊 Power BI Implementation
+
+This is where the data actually starts telling a story. I didn't just make "pretty charts"; I structured the report for actual financial auditing.
+
+### Data Modeling & DAX
+* **Measure Organization:** To keep the model scalable, I used **Display Folders** to group the 80+ measures into logical buckets: `01 | Spend Analysis`, `02 | Budget & Burn`, and `03 | Merchant Concentration`.
+* **Key DAX Logic:**
+    * `Top 5 Concentration %`: Dynamically calculates the weight of the top 5 vendors against total spend using `TOPN` and `ALLSELECTED`.
+    * `Cumulative % Spend`: A running total calculation to drive the Pareto curve.
+    * `Expense Variability`: Standard deviation logic to separate fixed costs from volatile spending.
+
+### Visual Insights
+* **Spending Dynamics:** A Scatter Chart crossing *Average Spend vs Volatility*. It helps identify if a category is a constant "small leak" or a giant one-off spike.
+* **Merchant Analytics:** A Pareto chart to find the "fat" in the budget. I used *Conditional Columns* in Power Query to normalize messy bank descriptions (e.g., cleaning `AUTO MERCADO 1234` into a clean `Auto Mercado` label).
+* **Burn Tracking:** Real-time comparison of actual spend vs. monthly budget targets.
 
 ---
 
-## 🧱 Data Model
+## 🔬 SQL Analytics Highlights
 
-Star schema designed for Power BI compatibility:
+### Data Quality & Outliers
+Before visualizing anything, I ran SQL scripts to ensure the data was trustworthy:
+* **3-Sigma Rule:** Identified transactions that were statistical outliers within their specific category to avoid skewed averages.
+* **Schema Integrity:** Enforced a **Star Schema** to ensure high performance when filtering by Date, Category, or Merchant in Power BI.
 
-```
-                    ┌─────────────────┐
-                    │   dim_date      │
-                    │  date_id (PK)   │
-                    │  full_date      │
-                    │  day_name       │
-                    │  is_weekend     │
-                    └────────┬────────┘
-                             │
-┌──────────────┐    ┌────────▼────────────┐    ┌──────────────────────┐
-│ dim_category │    │    transactions      │    │   dim_merchant       │
-│ category_id  │◄───│  transaction_id (PK) │───►│   merchant_id        │
-│ category_name│    │  transaction_date    │    │   merchant_name      │
-│ category_group    │  amount              │    │   merchant_norm      │
-└──────────────┘    │  type (inc/exp/trf)  │    └──────────────────────┘
-                    │  category_id (FK)    │
-                    │  merchant_id (FK)    │    ┌──────────────────────┐
-                    │  payment_method_id──►│───►│ dim_payment_method   │
-                    │  source_row_hash     │    │  payment_method_id   │
-                    └─────────────────────┘    │  payment_method_name │
-                                               └──────────────────────┘
-```
-
-**Key design decisions:**
-- `source_row_hash` (SHA-256) prevents duplicate loads across monthly files
-- `merchant_norm` normalizes raw bank descriptions for consistent grouping
-- `dim_date` pre-calculates `is_weekend`, `quarter`, `week_of_year` for Power BI performance
-- Transfers excluded from expense analysis via `type` filter
+### Core Metrics
+* **Run Rate:** Calculated the pace of spending to project the year-end total (`Projected Annual Run Rate`).
+* **MoM Change:** Compared growth or shrinkage in spending month-over-month using window functions (`LAG`).
 
 ---
 
-## 🔬 SQL Analytics
+## 💡 Key Insights
 
-### Data Quality (`03_data_quality.sql`)
-- % of nulls per key column
-- Top merchants missing category assignment
-- Outlier detection using **3-sigma rule** per category
-- Variability analysis (avg, stddev, max) by category
-
-### Core Metrics (`04_core_metrics.sql`)
-- Monthly spend + **MoM % change** using `LAG()`
-- Top categories by total spend
-- **Run rate**: daily spend pace → projected month-end total
-- **Percentiles** (p50, p75, p90) per category using `PERCENT_RANK()`
-
-### Segmentation (`05_segmentation.sql`)
-- Spend by payment method with % of total (`SUM() OVER()`)
-- Spend by day of week with weekend flag
-- **Pareto analysis**: top merchants with cumulative % (`ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`)
-
-### Alerts (`06_alerts.sql`) — in progress
-- Categories exceeding historical average + 2σ
-- Budget burn rate per category
-
----
-
-## 📊 Key Insights
-
-From 3 months of data (Nov 2025 – Jan 2026), 210 transactions, ₡963,214 CRC in total expenses:
-
-**💳 Payment method**
-90.8% of spend goes through card (`Tarjeta`). The remaining ~9% via bank transfers and SINPE could be underrepresented if not all accounts are included.
-
-**📅 Day of week**
-Saturday + Sunday account for **39.7% of total spend** in just 2 of 7 days. Thursday has the highest average ticket (₡11,386), driven by large one-off purchases.
-
-**🏪 Merchant concentration**
-The top 20 merchants represent **60% of total spend**. Three single-transaction merchants — E-TICKET E-COMMERCE (₡91,200), Vertigo Lincoln Plaza (₡44,500), and NOVA EC (₡27,400) — alone account for **17% of total spend**, showing how one-time events distort monthly averages.
-
-**🛒 Recurring vs. sporadic**
-Super Mega Más y Más appears 11 times but ranks 6th in total spend — controlled recurring grocery spend. Librería Internacional ranks 2nd with only 4 transactions — high-value but infrequent.
+* **Merchant Concentration:** The top 5 merchants represent **26% of my total spend**. Cost optimization should start here rather than on low-impact "micro-expenses."
+* **One-offs vs. Recurring:** High-spend merchants like `E-TICKET` showed only **1 transaction**, while `SINPE` showed **19**. This clearly separates "event-based" spending from "lifestyle" recurring costs.
+* **Temporal Patterns:** Nearly **40% of all spending** happens on Saturday and Sunday, highlighting where most discretionary spending occurs.
 
 ---
 
 ## ⚙️ How to Run
 
-**1. Set up the database**
-```sql
--- Run in order:
-mysql -u root -p < sql/01_create_tables.sql
-```
-
-**2. Process raw data**
-```bash
-python scripts/01_etl_combine_xls.py
-python scripts/02_transform_clean.py
-python scripts/03_categorize.py
-```
-
-**3. Load into MySQL**
-```sql
--- Import data_clean/transactions_categorized.csv into stg_transactions_raw
--- Then run:
-mysql -u root -p finance_ops < sql/02_load.sql
-```
-
-**4. Run analytics**
-```sql
-mysql -u root -p finance_ops < sql/03_data_quality.sql
-mysql -u root -p finance_ops < sql/04_core_metrics.sql
-mysql -u root -p finance_ops < sql/05_segmentation.sql
-```
-
----
-
-## 🚧 In Progress
-
-- [ ] `06_alerts.sql` — 2σ category alerts + budget burn
-- [ ] Power BI dashboard (5 pages: Overview, Categories, Merchants, Calendar, Data Quality)
-- [ ] February 2026 data load
-- [ ] README: add dashboard screenshots
+1.  Run the Python scripts in `/scripts` to clean and categorize the raw bank files.
+2.  Create the database and tables using `sql/01_create_tables.sql`.
+3.  Load the cleaned CSV into MySQL using the `sql/02_load.sql` procedure.
+4.  Open the `.pbix` file in Power BI Desktop and refresh the data source to your Localhost.
 
 ---
 
 ## 👩‍💻 About
 
-Built by **Valeria** as a first end-to-end data analytics project.  
-The goal: apply the same rigor used in business analytics to personal finance data — proper modeling, reproducible ETL, and insights that actually drive decisions.
+Built by **Valeria** as an end-to-end data analytics project. The goal was to move beyond basic budgeting and apply professional analyst rigor: data modeling, reproducible ETL pipelines, and advanced DAX.
 
 📬 [github.com/valeria-14-n](https://github.com/valeria-14-n)

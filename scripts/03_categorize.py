@@ -16,7 +16,7 @@ def main():
 
     df = pd.read_csv(IN_PATH, encoding="utf-8", sep=CSV_SEP)
     
-    # If you opened it in Excel CR, it might have become ';'.
+
     # We'll auto-detect using python engine + sep=None.
     rules = pd.read_csv(RULES_PATH, encoding="utf-8", sep=None, engine="python")
 

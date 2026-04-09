@@ -16,7 +16,7 @@ df["row_in_file"] = df.groupby("source_file").cumcount()
 # Ordenar SOLO por ese índice dentro de cada archivo
 df = df.sort_values(["source_file", "row_in_file"])
 
-# Ahora sí calcular delta
+# Calcular delta
 df["prev_balance"] = df.groupby("source_file")["balance"].shift(1)
 df["amount_signed"] = df["balance"] - df["prev_balance"]
 df["amount"] = df["amount_signed"]
