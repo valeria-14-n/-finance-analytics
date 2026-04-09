@@ -1,10 +1,10 @@
-# 💸 Finance Ops Analytics
+#  Finance Ops Analytics
 
 > Turning 3 months of personal bank data into a production-grade analytics pipeline — built the way a company would.
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Most people check their bank app once a month and move on. This project treats **personal finances as an operational dataset**. I built a full data model, SQL warehouse, and Power BI dashboard to answer real-world financial questions:
 
@@ -18,7 +18,7 @@ Most people check their bank app once a month and move on. This project treats *
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 
 finance-analytics/
@@ -39,7 +39,7 @@ finance-analytics/
 └── README.md
 
 
-## 📊 Power BI Implementation
+##  Power BI Implementation
 
 This is where the data actually starts telling a story. I didn't just make "pretty charts"; I structured the report for actual financial auditing.
 
@@ -57,7 +57,7 @@ This is where the data actually starts telling a story. I didn't just make "pret
 
 ---
 
-## 🔬 SQL Analytics Highlights
+##  SQL Analytics Highlights
 
 ### Data Quality & Outliers
 Before visualizing anything, I ran SQL scripts to ensure the data was trustworthy:
@@ -70,7 +70,7 @@ Before visualizing anything, I ran SQL scripts to ensure the data was trustworth
 
 ---
 
-## 💡 Key Insights
+##  Key Insights
 
 * **Merchant Concentration:** The top 5 merchants represent **26% of my total spend**. Cost optimization should start here rather than on low-impact "micro-expenses."
 * **One-offs vs. Recurring:** High-spend merchants like `E-TICKET` showed only **1 transaction**, while `SINPE` showed **19**. This clearly separates "event-based" spending from "lifestyle" recurring costs.
@@ -78,7 +78,7 @@ Before visualizing anything, I ran SQL scripts to ensure the data was trustworth
 
 ---
 
-## ⚙️ How to Run
+##  How to Run
 
 1.  Run the Python scripts in `/scripts` to clean and categorize the raw bank files.
 2.  Create the database and tables using `sql/01_create_tables.sql`.
@@ -87,7 +87,7 @@ Before visualizing anything, I ran SQL scripts to ensure the data was trustworth
 
 ---
 
-## 👩‍💻 About
+## About
 
 Built by **Valeria** as an end-to-end data analytics project. The goal was to move beyond basic budgeting and apply professional analyst rigor: data modeling, reproducible ETL pipelines, and advanced DAX.
 
