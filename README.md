@@ -1,7 +1,6 @@
 # 💸 Finance Ops Analytics
 
-> Turning 3 months of personal bank data into a production-grade analytics pipeline — built from the ground up.
-
+> Turning 3 months of personal bank data into a production-grade analytics pipeline.
 ---
 
 ## 📌 Overview

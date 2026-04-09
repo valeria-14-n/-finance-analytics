@@ -10,13 +10,13 @@ df = pd.read_csv("data_clean/transactions_raw_combined.csv", sep=";")
 for col in ["debitos", "creditos", "balance"]:
     df[col] = pd.to_numeric(df[col], errors="coerce")
 
-# Crear índice por archivo que preserve el orden original
+# Crear un índice de fila dentro de cada archivo
 df["row_in_file"] = df.groupby("source_file").cumcount()
 
-# Ordenar SOLO por ese índice dentro de cada archivo
+# Ordenar por archivo y el índice de fila
 df = df.sort_values(["source_file", "row_in_file"])
 
-# Calcular delta
+#   Calcular el balance anterior y la cantidad a partir de la diferencia
 df["prev_balance"] = df.groupby("source_file")["balance"].shift(1)
 df["amount_signed"] = df["balance"] - df["prev_balance"]
 df["amount"] = df["amount_signed"]
