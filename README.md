@@ -18,6 +18,14 @@ I designed the system to be **format-agnostic**, ensuring compatibility across d
 
 ---
 
+---## Dashboard Preview
+
+![Dashboard Overview](img/dashboard1.jpg)
+*Figure 1: Main Executive Dashboard showing Burn Rate and MoM trends.*
+
+![Data Quality](img/dashboard2.jpg)
+*Figure 2: Data Health monitoring and Anomaly Detection using Box Plots.*
+
 ## 🗂️ Project Structure
 
 ```text
@@ -84,8 +92,6 @@ The following insights were derived using a combination of **DAX statistical mod
 ### 4. Data Health & Integrity Monitoring
 * **Insight:** Achieved a **100% Data Health Score** with zero unmapped transactions across 3 different bank source formats.
 * **Business Action:** Built a dedicated Data Quality page to monitor Null percentages and mapping consistency, reflecting a "Data Integrity First" mindset essential for enterprise-scale environments.
-
----
 
 --- ##  Data Modeling Standards
 
