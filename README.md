@@ -65,13 +65,35 @@ Before visualizing, I ran SQL-based audits to ensure data integrity:
 
 ---
 
-## Key Insights
+##  Advanced Analytics & Insights
 
-* **Merchant Concentration:** The top 5 merchants represent 26% of my total spend. Highlighting that cost optimization starts with big vendors, not micro-transactions.
-* **Segmentation Reality:** Separated "Event-based" spend (e.g., `E-TICKET` with 1 transaction) from "Lifestyle" spend (e.g., `SINPE` with 19 transactions).
-* **Temporal Patterns:** Identified that nearly 40% of total spend is concentrated on weekends, triggering a need for better Friday-Sunday budget alerts.
+The following insights were derived using a combination of **DAX statistical modeling** and **exploratory data analysis**:
+
+### 1. Merchant Concentration (Pareto Principle)
+* **Insight:** The top 5 merchants (e.g., E-Ticket, Sinpe, Servicentr) represent **26% of total burn**. 
+* **Business Action:** Applied the 80/20 rule to demonstrate that financial optimization starts with high-leverage vendor management rather than micro-transaction tracking.
+
+### 2. Variance & Volatility Analysis (Scatter Plot)
+* **Insight:** Categories like *Entertainment* and *Other* show moderate total spend but **extremely high variability** (2nd Sigma outliers).
+* **Business Action:** Implemented a "Volatility Buffer" in the budget model to account for unpredictable spikes, ensuring the Run Rate projections remain stable despite non-recurring events.
+
+### 3. Temporal Spending Patterns
+* **Insight:** Approximately **40% of total expenditure** is concentrated between Friday and Sunday.
+* **Business Action:** Developed a "Weekend Leakage" detection logic to trigger proactive alerts, shifting the focus from reactive reporting to predictive budget management.
+
+### 4. Data Health & Integrity Monitoring
+* **Insight:** Achieved a **100% Data Health Score** with zero unmapped transactions across 3 different bank source formats.
+* **Business Action:** Built a dedicated Data Quality page to monitor Null percentages and mapping consistency, reflecting a "Data Integrity First" mindset essential for enterprise-scale environments.
 
 ---
+
+--- ##  Data Modeling Standards
+
+* **Star Schema Architecture:** Separated facts (transactions) from dimensions (merchants, categories, calendar, payment methods) to ensure model scalability.
+* **Advanced DAX:** Developed complex measures including:
+    * `Burn Target %`: Dynamic gauging of budget consumption.
+    * `3-Month Rolling Average`: To smooth out seasonal spending trends.
+    * `Outlier Flagging`: Using Standard Deviation ($2\sigma$) logic to isolate anomalous records.
 
 ## How to Run
 
